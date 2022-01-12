@@ -1,4 +1,5 @@
 import Sidebar from "components/Sidebar";
+import Chat from "components/Chat";
 import styles from "./App.module.scss";
 
 const App = () => {
@@ -6,7 +7,7 @@ const App = () => {
     <div className={styles.app}>
       <div className={styles.container}>
         <Sidebar />
-        <div className={styles.chatContainer}></div>
+        <Chat />
       </div>
     </div>
   );

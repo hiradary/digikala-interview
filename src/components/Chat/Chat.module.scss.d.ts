@@ -1,2 +1,2 @@
-export const app: string;
+export const actionBar: string;
 export const container: string;

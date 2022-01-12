@@ -6,6 +6,7 @@ import styles from "./Input.module.scss";
 
 interface Props {
   className?: string;
+  type: "search" | "normal";
 }
 
 const Input: React.FC<Props> = ({ className }) => {
@@ -19,6 +20,7 @@ const Input: React.FC<Props> = ({ className }) => {
 
 Input.defaultProps = {
   className: "",
+  type: "normal",
 };
 
 export default Input;

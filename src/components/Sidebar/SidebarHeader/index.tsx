@@ -10,7 +10,7 @@ const SidebarHeader = () => {
       <Ripples className={styles.button}>
         <MenuIcon className={styles.icon} />
       </Ripples>
-      <Input className={styles.input} />
+      <Input type="search" className={styles.input} />
     </div>
   );
 };

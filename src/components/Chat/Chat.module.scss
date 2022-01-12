@@ -1,0 +1,16 @@
+@import "styles/colors";
+
+.container {
+  flex: 3;
+  background-image: url("../../assets/images/bg.jpeg");
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  .actionBar {
+    width: 100%;
+    background-color: red;
+  }
+}
