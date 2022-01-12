@@ -1,0 +1,29 @@
+@import "styles/colors";
+
+.container {
+  width: 100%;
+  min-height: 3.5rem;
+  padding: 0 1rem;
+  border-bottom: 1px solid $border-color;
+  display: flex;
+  align-items: center;
+
+  .button {
+    background-color: $white;
+    border: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .icon {
+      color: $secondary-text-color;
+    }
+  }
+
+  .input {
+    margin: 0 0.4375rem;
+  }
+}
