@@ -15,7 +15,10 @@ const SidebarChatItem = () => {
       <div className={styles.userCaption}>
         <p className={styles.dialogTitle}>
           <span className={styles.userTitle}>Hirad</span>
-          <span className={styles.dialogTitleDetails}>03:31 PM</span>
+          <span className={styles.dialogTitleDetails}>Tue</span>
+        </p>
+        <p className={styles.dialogSubtitle}>
+          <span className={styles.userLastMessage}>Login code is 64231</span>
         </p>
       </div>
     </li>

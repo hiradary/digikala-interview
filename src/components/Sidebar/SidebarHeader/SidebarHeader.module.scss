@@ -1,22 +1,26 @@
 @import "styles/colors";
+@import "styles/variables";
 
 .container {
   width: 100%;
-  min-height: 3.5rem;
+  min-height: $sidebar-header-height;
   padding: 0 1rem;
-  border-bottom: 1px solid $border-color;
   display: flex;
   align-items: center;
 
   .button {
-    background-color: $white;
-    border: 0;
-    width: 2.5rem;
+    width: 3rem;
     height: 2.5rem;
-    border-radius: 100%;
+    border-radius: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: 0.15s background-color !important;
+
+    &:hover {
+      background-color: $light-secondary-text-color;
+    }
 
     .icon {
       color: $secondary-text-color;

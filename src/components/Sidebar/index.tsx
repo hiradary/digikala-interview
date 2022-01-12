@@ -8,6 +8,18 @@ const Sidebar = () => {
       <SidebarHeader />
       <ul className={styles.chatList}>
         <SidebarChatItem />
+        <SidebarChatItem />
+        <SidebarChatItem />
+        <SidebarChatItem />
+        <SidebarChatItem />
+        <SidebarChatItem />
+        <SidebarChatItem />
+        <SidebarChatItem />
+        <SidebarChatItem />
+        <SidebarChatItem />
+        <SidebarChatItem />
+        <SidebarChatItem />
+        <SidebarChatItem />
       </ul>
     </div>
   );

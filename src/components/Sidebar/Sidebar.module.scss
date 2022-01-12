@@ -1,16 +1,21 @@
 @import "styles/colors";
+@import "styles/variables";
 
 .container {
   flex: 1;
   border-right: 1px solid $border-color;
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
 
   .chatList {
     width: 100%;
     display: flex;
+    flex: 1;
     flex-direction: column;
     padding: 0 0.5rem;
     padding-top: 0.5rem;
+    overflow: auto;
   }
 }

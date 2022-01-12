@@ -7,11 +7,9 @@ import styles from "./SidebarHeader.module.scss";
 const SidebarHeader = () => {
   return (
     <div className={styles.container}>
-      <button type="button" title="Menu" className={styles.button}>
-        <Ripples>
-          <MenuIcon />
-        </Ripples>
-      </button>
+      <Ripples className={styles.button}>
+        <MenuIcon className={styles.icon} />
+      </Ripples>
       <Input className={styles.input} />
     </div>
   );

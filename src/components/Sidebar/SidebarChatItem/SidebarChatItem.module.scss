@@ -8,6 +8,10 @@
   border-radius: 10px;
   cursor: pointer;
 
+  &:hover {
+    background-color: $light-secondary-text-color;
+  }
+
   .avatar {
     display: flex;
     align-items: center;
@@ -41,21 +45,27 @@
 
       .userTitle {
         white-space: nowrap;
-        text-overflow: ellipsis;
-        line-height: 27px;
-        overflow: hidden;
         color: $primary-text-color;
         font-weight: bolder;
-        word-spacing: 1px;
       }
 
       .dialogTitleDetails {
         font-size: 0.75rem;
-        padding: 1px 0px 0px 0px;
-        // flex: 0 0 auto;
-        margin-left: 0.5rem;
-        word-spacing: 1px;
         font-weight: 400;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .dialogSubtitle {
+      display: flex;
+      text-align: left;
+
+      .userLastMessage {
+        font-size: 1rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: $secondary-text-color;
       }
     }
   }
