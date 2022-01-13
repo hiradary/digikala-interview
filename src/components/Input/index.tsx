@@ -6,14 +6,21 @@ import styles from "./Input.module.scss";
 
 interface Props {
   className?: string;
-  type: "search" | "normal";
+  type?: "search" | "normal";
+  placeholder: string;
 }
 
-const Input: React.FC<Props> = ({ className }) => {
+const Input: React.FC<Props> = ({ className, placeholder, type }) => {
   return (
-    <div className={classNames(styles.container, className)}>
-      <SearchIcon className={styles.searchIcon} />
-      <input className={styles.input} placeholder="Search" dir="auto" />
+    <div
+      className={classNames(
+        styles.container,
+        { [styles.searchInput]: type === "search" },
+        className
+      )}
+    >
+      {type === "search" && <SearchIcon className={styles.searchIcon} />}
+      <input className={styles.input} placeholder={placeholder} dir="auto" />
     </div>
   );
 };

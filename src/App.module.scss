@@ -19,3 +19,11 @@
     display: flex;
   }
 }
+
+@media screen and (max-width: 1440px) {
+  .app {
+    .container {
+      width: 100%;
+    }
+  }
+}
