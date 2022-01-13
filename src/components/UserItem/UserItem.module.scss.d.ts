@@ -1,3 +1,4 @@
+export const active: string;
 export const avatar: string;
 export const container: string;
 export const dialogSubtitle: string;

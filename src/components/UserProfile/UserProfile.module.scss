@@ -1,0 +1,63 @@
+@import "styles/colors";
+
+.container {
+  width: 100%;
+  max-width: 30rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .profileImageContainer {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 100%;
+    margin-bottom: 1rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 100%;
+    }
+  }
+
+  .fullname {
+    color: $primary-text-color;
+    font-weight: bold;
+  }
+
+  .username {
+    font-size: 0.875rem;
+    color: $secondary-text-color;
+    line-height: 1.3125rem;
+  }
+
+  .messageBtn {
+    border: 0;
+    background-color: $primary-color;
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    padding: 0 1rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    transition: 0.2s background-color;
+    margin-top: 2rem;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+
+    .messageBtnText {
+      color: $white;
+      font-weight: bold;
+    }
+
+    .messageBtnIcon {
+      color: $white;
+      margin-right: 0.5rem;
+    }
+  }
+}

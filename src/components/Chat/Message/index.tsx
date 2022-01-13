@@ -1,23 +1,15 @@
 import classNames from "classnames";
 
+import { Message } from "constants/index";
 import styles from "./Message.module.scss";
 
-interface MessageData {
-  id: string;
-  message: string;
-  reply: null | {
-    fullname: string;
-    message: string;
-  };
-}
-
 interface Props {
-  data: MessageData;
+  data: Message;
   isMine: boolean;
   createdAt: string;
 }
 
-const Message = ({ data, isMine, createdAt }: Props) => {
+const MessageComp = ({ data, isMine, createdAt }: Props) => {
   const { id, message, reply } = data;
 
   return (
@@ -33,10 +25,10 @@ const Message = ({ data, isMine, createdAt }: Props) => {
             <div className={styles.replyBorder}></div>
             <div className={styles.replyContent}>
               <span className={styles.replyFullname} dir="auto">
-                {reply.fullname}
+                {""}
               </span>
               <span className={styles.replyMessage} dir="auto">
-                {reply.message}
+                {""}
               </span>
             </div>
           </div>
@@ -48,4 +40,4 @@ const Message = ({ data, isMine, createdAt }: Props) => {
   );
 };
 
-export default Message;
+export default MessageComp;

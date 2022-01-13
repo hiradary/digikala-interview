@@ -8,7 +8,20 @@
   border-radius: 10px;
   cursor: pointer;
 
-  &:hover {
+  &.active {
+    background-color: $primary-color;
+
+    .userCaption {
+      color: $white;
+
+      .dialogTitle .userTitle,
+      .dialogSubtitle .userLastMessage {
+        color: $white;
+      }
+    }
+  }
+
+  &:hover:not(.active) {
     background-color: $light-secondary-text-color;
   }
 
