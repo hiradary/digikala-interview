@@ -17,6 +17,7 @@ const Sidebar = () => {
 
   useEffect(() => {
     updateChats(inputText);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [allChats]);
 
   const handleChatClick = (id: string) => {
