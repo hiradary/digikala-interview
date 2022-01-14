@@ -77,6 +77,26 @@ export const CHATS: Chat[] = [
       },
     ],
   },
+  {
+    id: "darya",
+    fullname: "Darya Ebrahimi",
+    username: "daryaebrahimi",
+    avatar: require("../assets/images/user4.png"),
+    chat: [
+      {
+        id: "message_1",
+        message: "Sarde :) hafte bad berim.",
+        createdBy: "darya",
+        reply: "message_2",
+      },
+      {
+        id: "message_2",
+        message: "Emrooz berim begardim biron?",
+        createdBy: "hirad",
+        reply: null,
+      },
+    ],
+  },
 ];
 
 export const SAMPLE_REPLIES = [
