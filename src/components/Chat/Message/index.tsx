@@ -1,3 +1,4 @@
+import React from "react";
 import classNames from "classnames";
 
 import { Message } from "constants/index";
@@ -7,10 +8,14 @@ interface Props {
   data: Message;
   isMine: boolean;
   createdAt: string;
+  reply?: null | {
+    message?: string;
+    fullname?: string;
+  };
 }
 
-const MessageComp = ({ data, isMine, createdAt }: Props) => {
-  const { id, message, reply } = data;
+const MessageComp: React.FC<Props> = ({ data, isMine, createdAt, reply }) => {
+  const { message } = data;
 
   return (
     <div
@@ -25,10 +30,10 @@ const MessageComp = ({ data, isMine, createdAt }: Props) => {
             <div className={styles.replyBorder}></div>
             <div className={styles.replyContent}>
               <span className={styles.replyFullname} dir="auto">
-                {""}
+                {reply.fullname}
               </span>
               <span className={styles.replyMessage} dir="auto">
-                {""}
+                {reply.message}
               </span>
             </div>
           </div>
@@ -38,6 +43,10 @@ const MessageComp = ({ data, isMine, createdAt }: Props) => {
       </div>
     </div>
   );
+};
+
+MessageComp.defaultProps = {
+  reply: null,
 };
 
 export default MessageComp;

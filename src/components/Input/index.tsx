@@ -8,9 +8,17 @@ interface Props {
   className?: string;
   type?: "search" | "normal";
   placeholder: string;
+  value?: string;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Input: React.FC<Props> = ({ className, placeholder, type }) => {
+const Input: React.FC<Props> = ({
+  className,
+  placeholder,
+  type,
+  value,
+  onChange,
+}) => {
   return (
     <div
       className={classNames(
@@ -20,7 +28,13 @@ const Input: React.FC<Props> = ({ className, placeholder, type }) => {
       )}
     >
       {type === "search" && <SearchIcon className={styles.searchIcon} />}
-      <input className={styles.input} placeholder={placeholder} dir="auto" />
+      <input
+        className={styles.input}
+        placeholder={placeholder}
+        dir="auto"
+        value={value}
+        onChange={onChange}
+      />
     </div>
   );
 };
@@ -28,6 +42,8 @@ const Input: React.FC<Props> = ({ className, placeholder, type }) => {
 Input.defaultProps = {
   className: "",
   type: "normal",
+  value: "",
+  onChange: (e) => null,
 };
 
 export default Input;

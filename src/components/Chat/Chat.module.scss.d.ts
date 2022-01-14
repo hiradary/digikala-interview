@@ -1,4 +1,5 @@
 export const actionBar: string;
+export const actionBarContainer: string;
 export const button: string;
 export const container: string;
 export const content: string;

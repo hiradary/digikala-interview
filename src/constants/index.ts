@@ -16,13 +16,14 @@ export interface Chat extends User {
   chat: Message[];
 }
 
+export const ME: User = {
+  id: "hirad",
+  fullname: "Hirad Arshadi",
+  username: "hiradarshadi",
+  avatar: require("../assets/images/user1.png"),
+};
+
 export const CONTACTS: User[] = [
-  {
-    id: "hirad",
-    fullname: "Hirad Arshadi",
-    username: "hiradarshadi",
-    avatar: require("../assets/images/user1.png"),
-  },
   {
     id: "arman",
     fullname: "Arman Rokni",
@@ -76,4 +77,19 @@ export const CHATS: Chat[] = [
       },
     ],
   },
+];
+
+export const SAMPLE_REPLIES = [
+  "Love For All, Hatred For None.",
+  "Change the world by being yourself.",
+  "Never regret anything that made you smile.",
+  "Every moment is a fresh beginning.",
+  "Aspire to inspire before we expire.",
+  "Everything you can imagine is real.",
+  "Simplicity is the ultimate sophistication.",
+  "Whatever you do, do it well.",
+  "What we think, we become.",
+  "All limitations are self-imposed.",
+  "Tough times never last but tough people do.",
+  "Problems are not stop signs, they are guidelines.",
 ];

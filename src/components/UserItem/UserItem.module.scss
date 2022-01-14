@@ -7,6 +7,8 @@
   align-items: center;
   border-radius: 10px;
   cursor: pointer;
+  overflow: hidden;
+  min-height: 4.5rem;
 
   &.active {
     background-color: $primary-color;
@@ -49,12 +51,14 @@
     display: flex;
     flex-direction: column;
     color: $secondary-text-color;
+    overflow: hidden;
 
     .dialogTitle {
       height: 27px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      text-overflow: ellipsis;
 
       .userTitle {
         white-space: nowrap;
@@ -66,18 +70,18 @@
         font-size: 0.75rem;
         font-weight: 400;
         white-space: nowrap;
-        text-overflow: ellipsis;
       }
     }
 
     .dialogSubtitle {
       display: flex;
       text-align: left;
+      text-overflow: ellipsis;
+      overflow: hidden;
 
       .userLastMessage {
         font-size: 1rem;
         white-space: nowrap;
-        text-overflow: ellipsis;
         color: $secondary-text-color;
       }
     }

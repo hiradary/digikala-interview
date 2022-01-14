@@ -85,10 +85,18 @@
     padding-bottom: 0.8125rem;
     display: flex;
     justify-content: center;
-    .inputContainer {
+
+    .actionBarContainer {
       width: 100%;
-      margin: 0 0.8125rem;
+      padding: 0 0.8125rem;
       max-width: $container-max-width;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .inputContainer {
+      flex: 1;
     }
 
     .button {
@@ -103,6 +111,12 @@
       box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%),
         0 1px 5px 0 rgb(0 0 0 / 20%);
       cursor: pointer;
+      margin-left: 0.8125rem;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: darken($white, 5%);
+      }
 
       .sendIcon {
         color: $primary-color;
