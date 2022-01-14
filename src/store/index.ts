@@ -32,7 +32,10 @@ export const appSlice = createSlice({
       state.chats
         .find((item) => item.id === conversationId)
         ?.chat.unshift(message);
-      state.activeChat?.chat.unshift(message);
+
+      if (state.activeChat?.id === conversationId) {
+        state.activeChat?.chat.unshift(message);
+      }
     },
   },
 });
