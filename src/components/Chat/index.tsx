@@ -128,6 +128,7 @@ const Chat = () => {
                 type="normal"
                 value={inputText}
                 onChange={({ target }) => setInputText(target.value)}
+                autoFocus
               />
               <button title="Send" className={styles.button} type="submit">
                 <SendIcon className={styles.sendIcon} />

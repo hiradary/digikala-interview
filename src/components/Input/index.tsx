@@ -10,6 +10,7 @@ interface Props {
   placeholder: string;
   value?: string;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  autoFocus?: boolean;
 }
 
 const Input: React.FC<Props> = ({
@@ -18,6 +19,7 @@ const Input: React.FC<Props> = ({
   type,
   value,
   onChange,
+  autoFocus,
 }) => {
   return (
     <div
@@ -34,6 +36,7 @@ const Input: React.FC<Props> = ({
         dir="auto"
         value={value}
         onChange={onChange}
+        autoFocus={autoFocus}
       />
     </div>
   );
@@ -44,6 +47,7 @@ Input.defaultProps = {
   type: "normal",
   value: "",
   onChange: (e) => null,
+  autoFocus: false,
 };
 
 export default Input;
