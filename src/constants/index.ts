@@ -111,5 +111,4 @@ export const SAMPLE_REPLIES = [
   "What we think, we become.",
   "All limitations are self-imposed.",
   "Tough times never last but tough people do.",
-  "Problems are not stop signs, they are guidelines.",
 ];
